@@ -4,6 +4,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { Icon } from "@/components/ui/icons";
+import { DepthCard } from "@/components/ui/DepthCard";
 import { projectCategories, projects, type ProjectCategory } from "@/lib/content";
 
 export function ProjectGallery() {
@@ -49,25 +50,27 @@ export function ProjectGallery() {
               transition={{ duration: 0.45, delay: index * 0.03, ease: [0.16, 1, 0.3, 1] }}
               className="group scroll-mt-32"
             >
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[16px] bg-sand">
-                <Image
-                  src={project.image}
-                  alt={`${project.title} — ${project.category} à ${project.city}`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-[1.1s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-90" />
-                <span className="absolute left-4 top-4 rounded-full bg-paper/90 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-ink backdrop-blur">
-                  {project.category}
-                </span>
-                <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3">
-                  <p className="text-[0.7rem] font-medium text-paper/85">{project.city}</p>
-                  <span className="flex size-8 items-center justify-center rounded-full border border-paper/40 text-paper opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                    <Icon name="arrow-up-right" size={14} />
+              <DepthCard intensity={6} glow={false}>
+                <div className="relative aspect-[4/5] overflow-hidden rounded-[16px] bg-sand">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} — ${project.category} à ${project.city}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-[1.1s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-90" />
+                  <span className="absolute left-4 top-4 rounded-full bg-paper/90 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-ink backdrop-blur">
+                    {project.category}
                   </span>
+                  <div className="absolute inset-x-4 bottom-4 flex items-end justify-between gap-3">
+                    <p className="text-[0.7rem] font-medium text-paper/85">{project.city}</p>
+                    <span className="flex size-8 items-center justify-center rounded-full border border-paper/40 text-paper opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                      <Icon name="arrow-up-right" size={14} />
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </DepthCard>
               <h3 className="mt-4 text-[1.15rem] leading-snug">{project.title}</h3>
               <p className="mt-2 text-[0.88rem] leading-relaxed text-ink-muted">{project.description}</p>
             </motion.article>

@@ -3,12 +3,10 @@ import { Icon } from "@/components/ui/icons";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { site } from "@/lib/site";
-import { GridBackdrop } from "@/components/ui/Decor";
 
 export function ZonesSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-paper py-20 md:py-28">
-      <GridBackdrop mask="right" />
+    <section className="relative overflow-hidden bg-paper py-20 md:py-28">
       <div className="container-x grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-20">
         <SectionHeading
           eyebrow="Zone d'intervention"

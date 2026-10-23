@@ -9,13 +9,15 @@ type Props = {
   className?: string;
   /** Amplitude du basculement en degrés (6 = discret, 12 = marqué). */
   intensity?: number;
+  /** Halo lumineux derrière la carte (désactivé pour les cadres photo). */
+  glow?: boolean;
 };
 
 /**
  * Enveloppe une carte dans une scène 3D : la carte se redresse puis
  * s'incline en suivant sa position dans le viewport au scroll.
  */
-export function DepthCard({ children, className = "", intensity = 9 }: Props) {
+export function DepthCard({ children, className = "", intensity = 9, glow = true }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
@@ -24,7 +26,7 @@ export function DepthCard({ children, className = "", intensity = 9 }: Props) {
   const rotateZ = useTransform(scrollYProgress, [0, 0.5, 1], ["1.2deg", "0deg", "-1deg"]);
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.955, 1, 0.985]);
   const y = useTransform(scrollYProgress, [0, 0.5, 1], [26, 0, -14]);
-  const glow = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.55, 0]);
+  const highlight = useTransform(scrollYProgress, [0, 0.5, 1], [0, 0.55, 0]);
 
   if (reduce) {
     return <div className={className}>{children}</div>;
@@ -32,11 +34,13 @@ export function DepthCard({ children, className = "", intensity = 9 }: Props) {
 
   return (
     <div ref={ref} className={`relative isolate [perspective:1400px] ${className}`}>
-      <motion.span
-        aria-hidden="true"
-        style={{ opacity: glow }}
-        className="pointer-events-none absolute -inset-4 -z-10 rounded-[32px] bg-[radial-gradient(ellipse_at_center,rgba(27,79,216,0.28),transparent_70%)] blur-2xl"
-      />
+      {glow && (
+        <motion.span
+          aria-hidden="true"
+          style={{ opacity: highlight }}
+          className="pointer-events-none absolute -inset-4 -z-10 rounded-[32px] bg-[radial-gradient(ellipse_at_center,rgba(27,79,216,0.28),transparent_70%)] blur-2xl"
+        />
+      )}
       <motion.div
         style={{ rotateX, rotateZ, scale, y, transformStyle: "preserve-3d" }}
         className="h-full will-change-transform"

@@ -1,11 +1,13 @@
 import { Icon } from "@/components/ui/icons";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { GridBackdrop } from "@/components/ui/Decor";
 import { testimonials } from "@/lib/content";
 
 export function Testimonials() {
   return (
-    <section className="relative overflow-hidden bg-mist py-20 md:py-28">
+    <section className="relative isolate overflow-hidden bg-mist py-20 md:py-28">
+      <GridBackdrop variant="azur" mask="radial" className="opacity-80" />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-32 -top-24 size-[28rem] rounded-full bg-[radial-gradient(circle,rgba(224,161,60,0.25),transparent_68%)] blur-2xl"

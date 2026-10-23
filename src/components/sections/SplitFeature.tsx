@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@/components/ui/icons";
 import { MeasureLine } from "@/components/ui/Decor";
+import { DepthCard } from "@/components/ui/DepthCard";
 import { Reveal } from "@/components/ui/Reveal";
 
 type Props = {
@@ -36,15 +37,17 @@ export function SplitFeature({
               label="Sur mesure"
               className="absolute -left-6 bottom-16 top-12 hidden lg:flex"
             />
-            <div className="arch relative aspect-[4/5] overflow-hidden bg-sand">
-              <Image
-                src={image}
-                alt={imageAlt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 48vw"
-                className="object-cover"
-              />
-            </div>
+            <DepthCard intensity={7} glow={false}>
+              <div className="arch relative aspect-[4/5] overflow-hidden bg-sand">
+                <Image
+                  src={image}
+                  alt={imageAlt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 48vw"
+                  className="object-cover"
+                />
+              </div>
+            </DepthCard>
             <div className="absolute -bottom-5 -right-3 hidden items-center gap-3 rounded-full bg-paper px-5 py-3 shadow-[0_18px_40px_rgba(25,23,19,0.14)] sm:flex">
               <span className="flex size-7 items-center justify-center rounded-full bg-azur text-paper">
                 <Icon name="sparkle" size={14} />

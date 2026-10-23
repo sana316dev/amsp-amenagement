@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Icon } from "@/components/ui/icons";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { DepthCard } from "@/components/ui/DepthCard";
 import { projects } from "@/lib/content";
 
 export function ProjectStrip({
@@ -37,15 +38,17 @@ export function ProjectStrip({
           {selection.map((project, index) => (
             <Reveal key={project.id} delay={index * 0.07}>
               <Link href={`/realisations#${project.id}`} className="group block">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-[16px] bg-sand">
-                  <Image
-                    src={project.image}
-                    alt={`${project.title} — ${project.city}`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-[1.1s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
-                  />
-                </div>
+                <DepthCard intensity={6} glow={false}>
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-[16px] bg-sand">
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} — ${project.city}`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-[1.1s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]"
+                    />
+                  </div>
+                </DepthCard>
                 <p className="mt-4 text-[0.64rem] font-semibold uppercase tracking-[0.18em] text-azur-dark">
                   {project.category} — {project.city}
                 </p>

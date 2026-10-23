@@ -3,14 +3,13 @@ import Link from "next/link";
 import { Icon } from "@/components/ui/icons";
 import { Reveal } from "@/components/ui/Reveal";
 import { DepthCard } from "@/components/ui/DepthCard";
-import { CornerMarks, GridBackdrop, RulerTicks } from "@/components/ui/Decor";
+import { CornerMarks, RulerTicks } from "@/components/ui/Decor";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { services } from "@/lib/content";
 
 export function ServicesPreview() {
   return (
     <section className="relative isolate overflow-hidden bg-cream py-20 md:py-28">
-      <GridBackdrop mask="bottom" className="opacity-80" />
       <div className="container-x">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <SectionHeading
