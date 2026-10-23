@@ -40,7 +40,7 @@ export function CtaBand({
             <div className="flex flex-col gap-3">
               <Link
                 href="/contact"
-                className="btn w-full justify-between bg-azur-bright text-ink transition-colors hover:bg-[#6fd4ff]"
+                className="btn w-full justify-between bg-azur-bright text-ink hover:bg-[#6fd4ff]"
               >
                 Demander mon devis gratuit
                 <Icon name="arrow-right" size={17} />

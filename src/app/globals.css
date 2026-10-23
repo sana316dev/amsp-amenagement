@@ -128,6 +128,8 @@
   }
 
   .btn {
+    position: relative;
+    isolation: isolate;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -138,13 +140,59 @@
     font-weight: 600;
     line-height: 1;
     letter-spacing: 0.01em;
+    /* Relief : lumière en haut, ombre portée douce, arête basse. */
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.22) 0%,
+      rgba(255, 255, 255, 0.07) 40%,
+      rgba(255, 255, 255, 0) 64%,
+      rgba(6, 12, 22, 0.1) 100%
+    );
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.32),
+      inset 0 -2px 0 rgba(6, 12, 22, 0.14),
+      0 1px 2px rgba(6, 12, 22, 0.1),
+      0 10px 24px -16px rgba(6, 24, 60, 0.55);
     transition: background-color 0.35s var(--ease-out-soft), color 0.35s var(--ease-out-soft),
-      border-color 0.35s var(--ease-out-soft), transform 0.35s var(--ease-out-soft);
+      border-color 0.35s var(--ease-out-soft), transform 0.35s var(--ease-out-soft),
+      box-shadow 0.35s var(--ease-out-soft);
     white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Glacis 3D : posé au-dessus du fond, sous le texte, pour que le relief
+     survive aux ombres utilitaires posées sur certains boutons. */
+  .btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.26) 0%,
+        rgba(255, 255, 255, 0) 48%
+      ),
+      radial-gradient(130% 90% at 50% 130%, rgba(6, 12, 22, 0.22), transparent 62%);
+    pointer-events: none;
+    transition: opacity 0.35s var(--ease-out-soft);
   }
 
   .btn:hover {
     transform: translateY(-2px);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.42),
+      inset 0 -2px 0 rgba(6, 12, 22, 0.16),
+      0 2px 3px rgba(6, 12, 22, 0.12),
+      0 20px 34px -18px rgba(6, 28, 70, 0.65);
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+    box-shadow:
+      inset 0 2px 6px rgba(6, 12, 22, 0.3),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.16),
+      0 1px 2px rgba(6, 12, 22, 0.12);
   }
 
   .btn svg {
@@ -156,33 +204,40 @@
   }
 
   .btn-primary {
-    background: var(--color-azur);
+    background-color: var(--color-azur);
     color: #fffaf5;
   }
 
   .btn-primary:hover {
-    background: var(--color-azur-dark);
+    background-color: var(--color-azur-dark);
   }
 
   .btn-ghost {
     border: 1px solid color-mix(in srgb, var(--color-ink) 25%, transparent);
     color: var(--color-ink);
-    background: transparent;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: 0 1px 2px rgba(6, 12, 22, 0.04);
+  }
+
+  .btn-ghost::after {
+    display: none;
   }
 
   .btn-ghost:hover {
-    background: var(--color-ink);
+    background-color: var(--color-ink);
     color: var(--color-paper);
     border-color: var(--color-ink);
+    box-shadow: 0 12px 22px -16px rgba(6, 24, 60, 0.6);
   }
 
   .btn-cream {
-    background: var(--color-paper);
+    background-color: var(--color-paper);
     color: var(--color-ink);
   }
 
   .btn-cream:hover {
-    background: #fff;
+    background-color: #fff;
   }
 
   .link-arrow {

@@ -143,14 +143,14 @@ export function Hero() {
                 <div className="fade-up-soft mt-8 flex flex-col gap-3 sm:flex-row sm:items-center" style={delay(0.72)}>
                   <Link
                     href="/contact"
-                    className="btn bg-azur-bright text-ink shadow-[0_18px_40px_-14px_rgba(69,196,245,0.75)] transition-colors hover:bg-[#6fd4ff]"
+                    className="btn bg-azur-bright text-ink shadow-[0_18px_40px_-14px_rgba(69,196,245,0.75)] hover:bg-[#6fd4ff]"
                   >
                     Demander un devis gratuit
                     <Icon name="arrow-right" size={17} />
                   </Link>
                   <Link
                     href="/realisations"
-                    className="btn border border-paper/40 bg-paper/5 text-paper backdrop-blur-sm transition-colors hover:border-paper hover:bg-paper hover:text-ink"
+                    className="btn border border-paper/40 bg-paper/5 text-paper backdrop-blur-sm hover:border-paper hover:bg-paper hover:text-ink"
                   >
                     Découvrir nos réalisations
                   </Link>
