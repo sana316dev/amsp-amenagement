@@ -2,7 +2,7 @@
 
 Site vitrine haut de gamme pour **AMSP Aménagement** (cuisines, agencements sur mesure, menuiserie et rénovation intérieure) au 29 rue James Jackson, 42500 Le Chambon-Feugerolles.
 
-Construit avec **Next.js 15 (App Router)**, **Tailwind CSS 4** et **Motion** (animations). Toutes les pages sont prérendues en statique pour un chargement rapide et un référencement local propre.
+Construit avec **Next.js 16 (App Router)**, **Tailwind CSS 4** et **Motion** (animations). Toutes les pages sont prérendues en statique pour un chargement rapide et un référencement local propre.
 
 ---
 
