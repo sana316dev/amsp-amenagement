@@ -15,6 +15,12 @@ npm run build    # build de production
 npm run start    # serveur de production
 ```
 
+Si vous ouvrez l'aperçu de développement par un autre nom d'hôte que `localhost` (tunnel, proxy, panneau d'aperçu), ajoutez-le à `NEXT_ALLOWED_DEV_ORIGINS` : Next refuse sinon les ressources `/_next` cross-origin et la page s'affiche sans jamais s'hydrater.
+
+```bash
+NEXT_ALLOWED_DEV_ORIGINS="mon-apercu.exemple.dev" npm run dev
+```
+
 ---
 
 ## 2. À personnaliser avant la mise en ligne
