@@ -28,11 +28,13 @@
     --cream: #f7f1e8;
     --sand: #efe6da;
     --paper: #fffdfa;
-    --gold: #c69c6d;
-    --gold-deep: #a97c4e;
-    --ink: #2b2320;
-    --muted: #6f625c;
-    --line: rgba(109, 31, 44, 0.14);
+    /* Accent électrique : cyan néon sur les fonds sombres, azur profond
+       pour les textes sur papier clair (contraste AA garanti). */
+    --gold: #17c9ff;
+    --gold-deep: #0a3fd1;
+    --ink: #17110f;
+    --muted: #3d322e;
+    --line: rgba(109, 31, 44, 0.22);
   }
 
   * { box-sizing: border-box; }
@@ -44,8 +46,8 @@
     background: #e6dccd;
     color: var(--ink);
     font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-size: 14.5px;
-    line-height: 1.68;
+    font-size: 15.6px;
+    line-height: 1.72;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -75,8 +77,8 @@
   }
 
   .kicker {
-    font-size: 10px;
-    font-weight: 700;
+    font-size: 10.6px;
+    font-weight: 800;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold-deep);
@@ -89,7 +91,8 @@
 
   .section-title { font-size: 34px; margin-bottom: 14px; }
   .section-title.small { font-size: 27px; }
-  .lead { font-size: 16px; color: var(--muted); line-height: 1.6; max-width: 62ch; }
+  .lead { font-size: 17px; color: var(--muted); line-height: 1.62; max-width: 62ch; }
+  strong, b { font-weight: 700; }
 
   .rule { height: 1px; background: var(--line); margin: 26px 0; border: 0; }
   .rule-gold { height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.7; border: 0; margin: 24px 0; }
@@ -105,8 +108,8 @@
     padding: 20px 20px 18px;
     break-inside: avoid;
   }
-  .card h3 { font-size: 19px; margin-bottom: 8px; }
-  .card p { font-size: 13.2px; color: var(--muted); margin: 0; }
+  .card h3 { font-size: 20px; margin-bottom: 8px; font-weight: 500; }
+  .card p { font-size: 14.2px; color: var(--muted); margin: 0; line-height: 1.65; }
   .card .no {
     font-family: "Fraunces", serif;
     font-size: 12px;
@@ -127,13 +130,13 @@
     border-left: 2px solid var(--burgundy);
   }
   .objectif .oi { font-family: "Fraunces", serif; color: var(--burgundy); font-size: 15px; line-height: 1.3; }
-  .objectif p { margin: 0; font-size: 13.4px; color: var(--muted); }
+  .objectif p { margin: 0; font-size: 14.2px; color: var(--muted); line-height: 1.65; }
   .objectif strong { color: var(--ink); font-weight: 600; }
 
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 26px; }
   .stat { text-align: center; padding: 16px 8px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
   .stat b { display: block; font-family: "Fraunces", serif; font-weight: 400; font-size: 26px; color: var(--burgundy); line-height: 1; }
-  .stat span { display: block; margin-top: 7px; font-size: 9.6px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+  .stat span { display: block; margin-top: 7px; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 
   .browser { border: 1px solid rgba(43, 35, 32, 0.14); border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 24px 44px -30px rgba(43, 35, 32, 0.5); }
   .browser-bar { display: flex; align-items: center; gap: 6px; padding: 9px 12px; background: #f2ece3; border-bottom: 1px solid rgba(43, 35, 32, 0.08); }
@@ -154,19 +157,19 @@
   .mini-hero-content .mb span:last-child { border: 1px solid rgba(251, 250, 246, 0.5); color: #fbfaf6; }
   .mini-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(43, 35, 32, 0.08); }
   .mini-band div { background: #f1eee6; padding: 12px 14px; font-size: 8px; letter-spacing: 0.06em; color: #4c5560; text-transform: uppercase; }
-  .caption { font-size: 10.5px; color: var(--muted); margin-top: 10px; letter-spacing: 0.02em; }
+  .caption { font-size: 11.6px; color: var(--muted); margin-top: 10px; letter-spacing: 0.02em; }
 
   .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .principle { border-top: 2px solid var(--burgundy); padding-top: 12px; }
   .principle h3 { font-size: 16.5px; margin-bottom: 6px; }
-  .principle p { font-size: 12.8px; color: var(--muted); margin: 0; }
+  .principle p { font-size: 13.8px; color: var(--muted); margin: 0; line-height: 1.62; }
 
   .pages-list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, auto); grid-auto-flow: column; gap: 7px 22px; }
-  .pages-list li { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; border-bottom: 1px dashed rgba(43, 35, 32, 0.16); padding-bottom: 6px; }
+  .pages-list li { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; border-bottom: 1px dashed rgba(23, 17, 15, 0.22); padding-bottom: 6px; }
   .pages-list li span { color: var(--muted); font-size: 11.5px; }
 
   .features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px; margin-top: 6px; }
-  .feature { display: flex; gap: 10px; align-items: flex-start; font-size: 13.2px; color: var(--muted); }
+  .feature { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--muted); line-height: 1.6; }
   .feature svg { flex: 0 0 auto; margin-top: 3px; }
 
   .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
@@ -188,14 +191,14 @@
   .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
   .kpi { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 11px 14px; }
   .kpi b { display: block; font-family: "Fraunces", serif; font-weight: 400; font-size: 15px; color: var(--burgundy); }
-  .kpi span { font-size: 11.4px; color: var(--muted); }
+  .kpi span { font-size: 12.6px; color: var(--muted); }
 
   .strategy { display: grid; gap: 0; margin-top: 6px; }
   .strategy-row { display: grid; grid-template-columns: 52px 1fr; gap: 16px; padding: 15px 0; border-top: 1px solid var(--line); }
   .strategy-row:last-child { border-bottom: 1px solid var(--line); }
-  .strategy-row .sn { font-family: "Fraunces", serif; font-size: 22px; color: var(--gold); line-height: 1; }
-  .strategy-row h3 { font-size: 17px; margin-bottom: 4px; }
-  .strategy-row p { font-size: 12.9px; color: var(--muted); margin: 0; }
+  .strategy-row .sn { font-family: "Fraunces", serif; font-size: 22px; color: var(--gold-deep); line-height: 1; font-weight: 500; }
+  .strategy-row h3 { font-size: 17px; margin-bottom: 4px; font-weight: 500; }
+  .strategy-row p { font-size: 13.8px; color: var(--muted); margin: 0; line-height: 1.62; }
 
   .service { border: 1px solid var(--line); border-radius: 12px; padding: 15px 20px 16px; background: #fff; break-inside: avoid; }
   .service-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 9px; }
@@ -203,7 +206,7 @@
   .service-price { font-family: "Fraunces", serif; font-size: 20px; color: var(--burgundy); white-space: nowrap; }
   .service-price small { font-family: "Manrope", sans-serif; font-size: 9.5px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; display: block; text-align: right; margin-top: 1px; }
   .service ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 3px 18px; }
-  .service li { font-size: 12.6px; color: var(--muted); display: flex; gap: 8px; line-height: 1.55; }
+  .service li { font-size: 13.8px; color: var(--muted); display: flex; gap: 8px; line-height: 1.6; }
   .service li::before { content: ""; width: 5px; height: 5px; margin-top: 8px; background: var(--gold); border-radius: 50%; flex: 0 0 auto; }
 
   .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
@@ -216,34 +219,34 @@
   .plan-price { font-family: "Fraunces", serif; font-size: 30px; color: var(--burgundy); line-height: 1; }
   .plan-price small { font-family: "Manrope", sans-serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: inherit; opacity: 0.7; margin-left: 4px; }
   .plan ul { list-style: none; margin: 12px 0 0; padding: 0; }
-  .plan li { font-size: 12.4px; color: var(--muted); padding: 3px 0 3px 14px; position: relative; }
+  .plan li { font-size: 13.6px; color: var(--muted); padding: 4px 0 4px 14px; position: relative; line-height: 1.58; }
   .plan li::before { content: ""; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
   .plan.recommended li::before { background: var(--gold); }
-  .badge { display: inline-block; background: var(--gold); color: #3c1017; font-size: 9px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; margin-bottom: 10px; }
+  .badge { display: inline-block; background: var(--gold); color: #06283a; font-size: 9.6px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; padding: 6px 11px; border-radius: 999px; margin-bottom: 10px; }
 
-  table.prices { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13px; }
-  table.prices th { text-align: left; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 0 0 8px; border-bottom: 1px solid var(--burgundy); }
+  table.prices { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px; }
+  table.prices th { text-align: left; font-size: 10.2px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 0 0 8px; border-bottom: 1px solid var(--burgundy); }
   table.prices td { padding: 9px 0; border-bottom: 1px solid rgba(43, 35, 32, 0.1); vertical-align: top; }
   table.prices td:last-child, table.prices th:last-child { text-align: right; white-space: nowrap; font-family: "Fraunces", serif; color: var(--burgundy); }
   table.prices tr.total td { border-bottom: 0; padding-top: 12px; font-weight: 600; }
-  .note { font-size: 11px; color: var(--muted); margin-top: 10px; }
+  .note { font-size: 12.2px; color: var(--muted); margin-top: 10px; line-height: 1.6; }
 
   .timeline { margin-top: 8px; }
   .week { display: grid; grid-template-columns: 92px 1fr; gap: 18px; padding: 13px 0; border-top: 1px solid var(--line); }
   .week:last-child { border-bottom: 1px solid var(--line); }
-  .week .wk { font-family: "Fraunces", serif; font-size: 15px; color: var(--burgundy); }
-  .week .wk span { display: block; font-family: "Manrope", sans-serif; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
-  .week h4 { font-size: 15px; margin-bottom: 3px; }
-  .week p { font-size: 12.6px; color: var(--muted); margin: 0; }
+  .week .wk { font-family: "Fraunces", serif; font-size: 16.5px; font-weight: 600; color: var(--burgundy); }
+  .week .wk span { display: block; font-family: "Manrope", sans-serif; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 3px; font-weight: 600; }
+  .week h4 { font-size: 16px; margin-bottom: 3px; font-weight: 500; }
+  .week p { font-size: 13.8px; color: var(--muted); margin: 0; line-height: 1.62; }
 
   .conditions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin-top: 12px; }
-  .condition { font-size: 12.6px; color: var(--muted); padding-left: 16px; position: relative; }
+  .condition { font-size: 13.6px; color: var(--muted); padding-left: 16px; position: relative; line-height: 1.6; }
   .condition::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 1px; background: var(--gold); }
   .condition strong { color: var(--ink); font-weight: 600; }
 
   .next { background: var(--cream); border-left: 3px solid var(--burgundy); border-radius: 0 10px 10px 0; padding: 20px 22px; }
   .next ol { margin: 8px 0 0; padding-left: 18px; }
-  .next li { font-size: 13px; color: var(--muted); padding: 3px 0; }
+  .next li { font-size: 14px; color: var(--muted); padding: 4px 0; line-height: 1.6; }
   .next li strong { color: var(--ink); }
 
   .signature { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-top: 34px; padding-top: 20px; border-top: 1px solid var(--line); }
@@ -283,7 +286,7 @@
   .cover-foot { padding: 18px 56px 22px; display: flex; justify-content: space-between; gap: 20px; font-size: 9.4px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247, 241, 232, 0.58); border-top: 1px solid rgba(247, 241, 232, 0.18); }
 
   .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 28px; margin-top: 16px; }
-  .toc a { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding: 8px 0; font-size: 13px; color: var(--ink); }
+  .toc a { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding: 9px 0; font-size: 14.2px; color: var(--ink); font-weight: 500; }
   .toc a span { color: var(--gold-deep); font-family: "Fraunces", serif; }
 
   .toolbar { position: fixed; right: 20px; bottom: 20px; z-index: 50; display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
@@ -292,18 +295,38 @@
   .toolbar .hint { font-size: 10.5px; color: var(--muted); background: rgba(255, 253, 250, 0.9); padding: 6px 10px; border-radius: 8px; }
 
   @media screen and (max-width: 760px) {
+    body { font-size: 16.4px; line-height: 1.74; }
     .doc { padding: 16px 8px 70px; }
-    .sheet { padding: 34px 22px; }
+    .sheet { padding: 30px 20px 34px; }
     .cover { min-height: auto; }
     .cover-top, .cover-main { padding-left: 24px; padding-right: 24px; }
     .cover-foot { padding-left: 24px; padding-right: 24px; flex-direction: column; gap: 6px; }
-    .cover h1 { font-size: 40px; }
+    .cover h1 { font-size: 38px; }
     .cover-photo { height: 220px; margin-top: 30px; }
     .grid-2, .grid-3, .grid-4, .plans, .principles, .pages-list, .features, .conditions, .toc { grid-template-columns: 1fr; }
     .stats { grid-template-columns: 1fr 1fr; }
     .gallery { grid-template-columns: 1fr 1fr; }
     .service ul { grid-template-columns: 1fr; }
     .section-title { font-size: 27px; }
+    /* Lecture au pouce : une colonne, des blocs plus aérés, du texte plus gros. */
+    .lead { font-size: 17.5px; }
+    .kicker { font-size: 11.2px; }
+    .card p, .objectif p, .principle p, .strategy-row p, .week p, .service li, .plan li,
+    .condition, .next li, .feature, .toc a, .pages-list li, table.prices, .pages-list li span,
+    .kpi span, .note, .caption { font-size: 15.2px; }
+    table.prices th { font-size: 11px; }
+    .week { grid-template-columns: 1fr; gap: 9px; padding: 16px 0; }
+    .week .wk { font-size: 18px; }
+    .week .wk span { margin-top: 4px; }
+    .week h4 { font-size: 16.5px; }
+    .badge { font-size: 10.4px; padding: 7px 12px; }
+    /* Tableau des tarifs : une ligne = un bloc, plus rien à déchiffrer au pouce. */
+    table.prices thead { display: none; }
+    table.prices tr { display: grid; gap: 3px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    table.prices td { display: block; padding: 0; border: 0; }
+    table.prices td:first-child { font-weight: 700; color: var(--ink); }
+    table.prices td:last-child { text-align: left; font-size: 17px; font-weight: 600; }
+    table.prices tr.total { border-bottom: 0; }
     .toolbar { left: 16px; right: 16px; align-items: stretch; }
     .toolbar .hint { text-align: center; }
   }
@@ -321,7 +344,7 @@
       box-shadow: none;
       border-radius: 0;
       margin: 0;
-      padding: 13mm 15mm;
+      padding: 8mm 14mm;
       min-height: 0;
       break-after: page;
       page-break-after: always;
@@ -338,9 +361,10 @@
     .toolbar { display: none !important; }
     a { color: inherit; }
     table.prices, .service, .plan, .week, .card, .strategy-row, .principle, .gallery figure, .next { break-inside: avoid; }
-    .section-title { font-size: 25pt; }
+    .section-title { font-size: 23pt; }
     .section-title.small { font-size: 20pt; }
-    .lead { font-size: 10.4pt; }
+    .lead { font-size: 10pt; }
+    .week p, .card p, .condition, .next li, .feature { line-height: 1.52; }
     .service { padding: 11px 18px 12px; }
     .service-head { padding-bottom: 6px; margin-bottom: 8px; }
     .service ul { gap: 2px 18px; }
@@ -876,42 +900,43 @@
   <!-- ══════════════ 8. PLANNING & CONDITIONS ══════════════ -->
   <section class="sheet" id="planning">
     <p class="kicker">06 — Le planning</p>
-    <h2 class="section-title">Cinq semaines, du brief à la mise en ligne.</h2>
+    <h2 class="section-title">Cinq étapes, du brief à la mise en ligne.</h2>
     <p class="lead" style="margin-bottom: 4px;">
-      Calendrier indicatif, à compter de la réception des contenus (photos, textes, accès).
+      Le déroulé est le même pour tous les projets, la durée ne l'est pas : chaque étape est calée avec vous au
+      démarrage, selon l'ampleur du chantier et la réception des contenus (photos, textes, accès).
     </p>
 
     <div class="timeline">
       <div class="week">
-        <div class="wk">Semaine 1<span>Cadrage</span></div>
+        <div class="wk">Étape 1<span>Cadrage</span></div>
         <div>
           <h4>Audit &amp; collecte</h4>
           <p>Analyse de l'existant, arborescence validée, liste des contenus et des photos à fournir, accès aux comptes.</p>
         </div>
       </div>
       <div class="week">
-        <div class="wk">Semaine 2<span>Identité</span></div>
+        <div class="wk">Étape 2<span>Identité</span></div>
         <div>
           <h4>Direction visuelle</h4>
           <p>Logo ou harmonisation, palette, typographies, mini-charte. Validation avant production.</p>
         </div>
       </div>
       <div class="week">
-        <div class="wk">Semaine 3<span>Production</span></div>
+        <div class="wk">Étape 3<span>Production</span></div>
         <div>
           <h4>Développement du site</h4>
           <p>Intégration des 7 pages, formulaire, boutons de contact, SEO local, carte et données structurées.</p>
         </div>
       </div>
       <div class="week">
-        <div class="wk">Semaine 4<span>Visibilité</span></div>
+        <div class="wk">Étape 4<span>Visibilité</span></div>
         <div>
           <h4>Google &amp; Instagram</h4>
           <p>Fiche Google Business Profile, photos, stratégie d'avis, visuels et ligne éditoriale Instagram.</p>
         </div>
       </div>
       <div class="week">
-        <div class="wk">Semaine 5<span>Lancement</span></div>
+        <div class="wk">Étape 5<span>Lancement</span></div>
         <div>
           <h4>Mise en ligne &amp; formation</h4>
           <p>Tests mobile et ordinateur, Analytics et Search Console, formation à la prise en main, puis lancement Google Ads si la formule Croissance est retenue.</p>
