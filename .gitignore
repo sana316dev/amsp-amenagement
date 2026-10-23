@@ -12,3 +12,6 @@ tsconfig.tsbuildinfo
 # Captures et fichiers de travail
 artifacts/
 proposition/.pylibs
+/freebuff-sites-build/
+/.open-next/
+/.wrangler/
