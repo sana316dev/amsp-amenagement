@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Proposition commerciale — AMSP Aménagement · Aïna Studio</title>
+<meta name="description" content="Proposition commerciale Aïna Studio pour AMSP Aménagement : site vitrine, identité visuelle, Google Business Profile, Instagram et Google Ads." />
+<style>
+  @font-face {
+    font-family: "Fraunces";
+    src: url(data:font/woff2;base64,__FRAUNCES__) format("woff2");
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Manrope";
+    src: url(data:font/woff2;base64,__MANROPE__) format("woff2");
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --burgundy: #6d1f2c;
+    --burgundy-deep: #4e141c;
+    --burgundy-soft: #8b2a3a;
+    --cream: #f7f1e8;
+    --sand: #efe6da;
+    --paper: #fffdfa;
+    --gold: #c69c6d;
+    --gold-deep: #a97c4e;
+    --ink: #2b2320;
+    --muted: #6f625c;
+    --line: rgba(109, 31, 44, 0.14);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: #e6dccd;
+    color: var(--ink);
+    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 14.5px;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    margin: 0;
+    color: var(--burgundy);
+  }
+
+  p { margin: 0 0 12px; }
+  a { color: var(--burgundy); text-decoration: none; }
+  em { font-style: italic; }
+
+  .doc { max-width: 920px; margin: 0 auto; padding: 44px 18px 90px; }
+
+  .sheet {
+    position: relative;
+    background: var(--paper);
+    border-radius: 6px;
+    box-shadow: 0 34px 70px -38px rgba(43, 35, 32, 0.45);
+    padding: 62px 66px;
+    margin: 0 0 26px;
+    overflow: hidden;
+  }
+
+  .kicker {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .kicker::before { content: ""; width: 30px; height: 1px; background: var(--gold); opacity: 0.75; }
+
+  .section-title { font-size: 34px; margin-bottom: 14px; }
+  .section-title.small { font-size: 27px; }
+  .lead { font-size: 16px; color: var(--muted); line-height: 1.6; max-width: 62ch; }
+
+  .rule { height: 1px; background: var(--line); margin: 26px 0; border: 0; }
+  .rule-gold { height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.7; border: 0; margin: 24px 0; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+  .card {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 20px 18px;
+    break-inside: avoid;
+  }
+  .card h3 { font-size: 19px; margin-bottom: 8px; }
+  .card p { font-size: 13.2px; color: var(--muted); margin: 0; }
+  .card .no {
+    font-family: "Fraunces", serif;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--gold-deep);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .objectifs { display: grid; gap: 12px; margin-top: 8px; }
+  .objectif {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 14px 16px;
+    background: var(--cream);
+    border-radius: 8px;
+    border-left: 2px solid var(--burgundy);
+  }
+  .objectif .oi { font-family: "Fraunces", serif; color: var(--burgundy); font-size: 15px; line-height: 1.3; }
+  .objectif p { margin: 0; font-size: 13.4px; color: var(--muted); }
+  .objectif strong { color: var(--ink); font-weight: 600; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 26px; }
+  .stat { text-align: center; padding: 16px 8px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+  .stat b { display: block; font-family: "Fraunces", serif; font-weight: 400; font-size: 26px; color: var(--burgundy); line-height: 1; }
+  .stat span { display: block; margin-top: 7px; font-size: 9.6px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+
+  .browser { border: 1px solid rgba(43, 35, 32, 0.14); border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 24px 44px -30px rgba(43, 35, 32, 0.5); }
+  .browser-bar { display: flex; align-items: center; gap: 6px; padding: 9px 12px; background: #f2ece3; border-bottom: 1px solid rgba(43, 35, 32, 0.08); }
+  .browser-bar i { width: 7px; height: 7px; border-radius: 50%; background: #d8c9b7; display: block; }
+  .browser-bar .url { margin-left: 10px; flex: 1; background: #fff; border-radius: 999px; font-size: 9.5px; color: #8b8078; padding: 3px 10px; letter-spacing: 0.04em; }
+  .mini-nav { display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: #fbfaf6; font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase; color: #4c5560; }
+  .mini-nav b { font-family: "Fraunces", serif; font-size: 12px; letter-spacing: -0.02em; color: #0e1622; margin-right: auto; }
+  .mini-nav .mini-cta { background: #1b4fd8; color: #fff; border-radius: 999px; padding: 4px 9px; font-size: 7.5px; letter-spacing: 0.1em; }
+  .mini-hero { position: relative; height: 236px; background-image: url("data:image/jpeg;base64,__HERO__"); background-size: cover; background-position: center; }
+  .mini-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(6, 12, 22, 0.94) 0%, rgba(6, 12, 22, 0.78) 42%, rgba(6, 12, 22, 0.25) 100%); }
+  .mini-hero-content { position: absolute; inset: 0; z-index: 2; padding: 26px 22px; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+  .mini-hero-content .mk { font-size: 7px; letter-spacing: 0.24em; text-transform: uppercase; color: #45c4f5; }
+  .mini-hero-content .mt { font-family: "Fraunces", serif; color: #fff; font-size: 23px; line-height: 1.05; letter-spacing: -0.02em; max-width: 72%; }
+  .mini-hero-content .mt em { color: #45c4f5; }
+  .mini-hero-content .mb { display: flex; gap: 6px; margin-top: 6px; }
+  .mini-hero-content .mb span { font-size: 7.5px; border-radius: 999px; padding: 5px 10px; letter-spacing: 0.06em; }
+  .mini-hero-content .mb span:first-child { background: #45c4f5; color: #0e1622; }
+  .mini-hero-content .mb span:last-child { border: 1px solid rgba(251, 250, 246, 0.5); color: #fbfaf6; }
+  .mini-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(43, 35, 32, 0.08); }
+  .mini-band div { background: #f1eee6; padding: 12px 14px; font-size: 8px; letter-spacing: 0.06em; color: #4c5560; text-transform: uppercase; }
+  .caption { font-size: 10.5px; color: var(--muted); margin-top: 10px; letter-spacing: 0.02em; }
+
+  .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .principle { border-top: 2px solid var(--burgundy); padding-top: 12px; }
+  .principle h3 { font-size: 16.5px; margin-bottom: 6px; }
+  .principle p { font-size: 12.8px; color: var(--muted); margin: 0; }
+
+  .pages-list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, auto); grid-auto-flow: column; gap: 7px 22px; }
+  .pages-list li { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; border-bottom: 1px dashed rgba(43, 35, 32, 0.16); padding-bottom: 6px; }
+  .pages-list li span { color: var(--muted); font-size: 11.5px; }
+
+  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px; margin-top: 6px; }
+  .feature { display: flex; gap: 10px; align-items: flex-start; font-size: 13.2px; color: var(--muted); }
+  .feature svg { flex: 0 0 auto; margin-top: 3px; }
+
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+  .gallery figure { margin: 0; }
+  .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; display: block; }
+  .gallery figcaption { font-size: 9.6px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); margin-top: 6px; }
+
+  .palette { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
+  .swatch { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #fff; }
+  .swatch span { display: block; height: 40px; }
+  .swatch b { display: block; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 7px 9px 0; color: var(--ink); }
+  .swatch i { display: block; font-style: normal; font-size: 9.2px; letter-spacing: 0.08em; color: var(--muted); padding: 0 9px 8px; }
+  .typo { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px; }
+  .typo > div { border-top: 1px solid var(--line); padding-top: 8px; }
+  .typo .t1 { font-family: "Fraunces", serif; font-size: 22px; color: var(--burgundy); line-height: 1.1; }
+  .typo .t2 { font-size: 16px; color: var(--ink); letter-spacing: -0.01em; }
+  .typo p { font-size: 11.5px; color: var(--muted); margin: 3px 0 0; }
+
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+  .kpi { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 11px 14px; }
+  .kpi b { display: block; font-family: "Fraunces", serif; font-weight: 400; font-size: 15px; color: var(--burgundy); }
+  .kpi span { font-size: 11.4px; color: var(--muted); }
+
+  .strategy { display: grid; gap: 0; margin-top: 6px; }
+  .strategy-row { display: grid; grid-template-columns: 52px 1fr; gap: 16px; padding: 15px 0; border-top: 1px solid var(--line); }
+  .strategy-row:last-child { border-bottom: 1px solid var(--line); }
+  .strategy-row .sn { font-family: "Fraunces", serif; font-size: 22px; color: var(--gold); line-height: 1; }
+  .strategy-row h3 { font-size: 17px; margin-bottom: 4px; }
+  .strategy-row p { font-size: 12.9px; color: var(--muted); margin: 0; }
+
+  .service { border: 1px solid var(--line); border-radius: 12px; padding: 15px 20px 16px; background: #fff; break-inside: avoid; }
+  .service-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 9px; }
+  .service-head h3 { font-size: 20px; }
+  .service-price { font-family: "Fraunces", serif; font-size: 20px; color: var(--burgundy); white-space: nowrap; }
+  .service-price small { font-family: "Manrope", sans-serif; font-size: 9.5px; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; display: block; text-align: right; margin-top: 1px; }
+  .service ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 3px 18px; }
+  .service li { font-size: 12.6px; color: var(--muted); display: flex; gap: 8px; line-height: 1.55; }
+  .service li::before { content: ""; width: 5px; height: 5px; margin-top: 8px; background: var(--gold); border-radius: 50%; flex: 0 0 auto; }
+
+  .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+  .plan { position: relative; border: 1px solid var(--line); border-radius: 12px; padding: 20px; background: #fff; break-inside: avoid; }
+  .plan.recommended { background: var(--burgundy); border-color: var(--burgundy); color: var(--cream); }
+  .plan.recommended h3, .plan.recommended .plan-price { color: var(--cream); }
+  .plan.recommended p, .plan.recommended li { color: rgba(247, 241, 232, 0.8); }
+  .plan h3 { font-size: 19px; margin-bottom: 4px; }
+  .plan .tagline { font-size: 11.4px; color: var(--muted); margin-bottom: 12px; }
+  .plan-price { font-family: "Fraunces", serif; font-size: 30px; color: var(--burgundy); line-height: 1; }
+  .plan-price small { font-family: "Manrope", sans-serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: inherit; opacity: 0.7; margin-left: 4px; }
+  .plan ul { list-style: none; margin: 12px 0 0; padding: 0; }
+  .plan li { font-size: 12.4px; color: var(--muted); padding: 3px 0 3px 14px; position: relative; }
+  .plan li::before { content: ""; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+  .plan.recommended li::before { background: var(--gold); }
+  .badge { display: inline-block; background: var(--gold); color: #3c1017; font-size: 9px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; margin-bottom: 10px; }
+
+  table.prices { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13px; }
+  table.prices th { text-align: left; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 0 0 8px; border-bottom: 1px solid var(--burgundy); }
+  table.prices td { padding: 9px 0; border-bottom: 1px solid rgba(43, 35, 32, 0.1); vertical-align: top; }
+  table.prices td:last-child, table.prices th:last-child { text-align: right; white-space: nowrap; font-family: "Fraunces", serif; color: var(--burgundy); }
+  table.prices tr.total td { border-bottom: 0; padding-top: 12px; font-weight: 600; }
+  .note { font-size: 11px; color: var(--muted); margin-top: 10px; }
+
+  .timeline { margin-top: 8px; }
+  .week { display: grid; grid-template-columns: 92px 1fr; gap: 18px; padding: 13px 0; border-top: 1px solid var(--line); }
+  .week:last-child { border-bottom: 1px solid var(--line); }
+  .week .wk { font-family: "Fraunces", serif; font-size: 15px; color: var(--burgundy); }
+  .week .wk span { display: block; font-family: "Manrope", sans-serif; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+  .week h4 { font-size: 15px; margin-bottom: 3px; }
+  .week p { font-size: 12.6px; color: var(--muted); margin: 0; }
+
+  .conditions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin-top: 12px; }
+  .condition { font-size: 12.6px; color: var(--muted); padding-left: 16px; position: relative; }
+  .condition::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 1px; background: var(--gold); }
+  .condition strong { color: var(--ink); font-weight: 600; }
+
+  .next { background: var(--cream); border-left: 3px solid var(--burgundy); border-radius: 0 10px 10px 0; padding: 20px 22px; }
+  .next ol { margin: 8px 0 0; padding-left: 18px; }
+  .next li { font-size: 13px; color: var(--muted); padding: 3px 0; }
+  .next li strong { color: var(--ink); }
+
+  .signature { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-top: 34px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .signature .who { font-family: "Fraunces", serif; font-size: 20px; color: var(--burgundy); }
+  .signature small { display: block; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+  .signature .stamp { text-align: right; font-size: 10.5px; color: var(--muted); line-height: 1.7; }
+
+  /* Couverture */
+  .cover {
+    background: var(--burgundy);
+    color: var(--cream);
+    padding: 0;
+    min-height: 1180px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .cover-top { padding: 40px 56px 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(247, 241, 232, 0.18); padding-bottom: 22px; }
+  .logo { display: flex; flex-direction: column; line-height: 1; }
+  .logo .lw { font-family: "Fraunces", serif; font-size: 22px; letter-spacing: 0.02em; color: var(--cream); }
+  .logo .lw span { color: var(--gold); }
+  .logo .ls { font-size: 8px; letter-spacing: 0.46em; text-transform: uppercase; color: rgba(247, 241, 232, 0.65); margin-top: 6px; }
+  .cover-meta { text-align: right; font-size: 9.4px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(247, 241, 232, 0.62); line-height: 1.9; }
+
+  .cover-main { padding: 56px 56px 0; flex: 0 0 auto; position: relative; }
+  .cover-kicker { font-size: 10px; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold); margin-bottom: 26px; }
+  .cover h1 { color: var(--cream); font-size: 64px; line-height: 0.98; letter-spacing: -0.03em; }
+  .cover h1 em { font-style: italic; color: var(--gold); }
+  .cover .cover-sub { margin-top: 20px; max-width: 470px; font-size: 15.5px; line-height: 1.65; color: rgba(247, 241, 232, 0.82); }
+  .cover .cover-hair { width: 64px; height: 1px; background: var(--gold); margin: 30px 0; }
+  .cover .cover-facts { display: grid; grid-template-columns: repeat(3, auto); gap: 30px; justify-content: start; }
+  .cover .cover-facts div { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(247, 241, 232, 0.55); }
+  .cover .cover-facts b { display: block; font-family: "Fraunces", serif; font-size: 19px; letter-spacing: 0; text-transform: none; color: var(--cream); margin-top: 5px; font-weight: 400; }
+
+  .cover-photo { margin-top: 44px; flex: 1; min-height: 300px; background-image: url("data:image/jpeg;base64,__HERO__"); background-size: cover; background-position: center 60%; position: relative; }
+  .cover-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(78, 20, 28, 0.55) 0%, rgba(78, 20, 28, 0.15) 45%, rgba(78, 20, 28, 0.85) 100%); }
+  .cover-foot { padding: 18px 56px 22px; display: flex; justify-content: space-between; gap: 20px; font-size: 9.4px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247, 241, 232, 0.58); border-top: 1px solid rgba(247, 241, 232, 0.18); }
+
+  .toc { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 28px; margin-top: 16px; }
+  .toc a { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding: 8px 0; font-size: 13px; color: var(--ink); }
+  .toc a span { color: var(--gold-deep); font-family: "Fraunces", serif; }
+
+  .toolbar { position: fixed; right: 20px; bottom: 20px; z-index: 50; display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
+  .toolbar button { font-family: "Manrope", sans-serif; border: 0; cursor: pointer; background: var(--burgundy); color: var(--cream); border-radius: 999px; padding: 13px 20px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.02em; box-shadow: 0 16px 30px -12px rgba(78, 20, 28, 0.7); }
+  .toolbar button:hover { background: var(--burgundy-deep); }
+  .toolbar .hint { font-size: 10.5px; color: var(--muted); background: rgba(255, 253, 250, 0.9); padding: 6px 10px; border-radius: 8px; }
+
+  @media screen and (max-width: 760px) {
+    .doc { padding: 16px 8px 70px; }
+    .sheet { padding: 34px 22px; }
+    .cover { min-height: auto; }
+    .cover-top, .cover-main { padding-left: 24px; padding-right: 24px; }
+    .cover-foot { padding-left: 24px; padding-right: 24px; flex-direction: column; gap: 6px; }
+    .cover h1 { font-size: 40px; }
+    .cover-photo { height: 220px; margin-top: 30px; }
+    .grid-2, .grid-3, .grid-4, .plans, .principles, .pages-list, .features, .conditions, .toc { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .gallery { grid-template-columns: 1fr 1fr; }
+    .service ul { grid-template-columns: 1fr; }
+    .section-title { font-size: 27px; }
+    .toolbar { left: 16px; right: 16px; align-items: stretch; }
+    .toolbar .hint { text-align: center; }
+  }
+
+  @page { size: A4; margin: 0; }
+
+  @media print {
+    html, body {
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .doc { max-width: none; padding: 0; margin: 0; }
+    .sheet {
+      box-shadow: none;
+      border-radius: 0;
+      margin: 0;
+      padding: 13mm 15mm;
+      min-height: 0;
+      break-after: page;
+      page-break-after: always;
+      overflow: visible;
+    }
+    .sheet:last-child { break-after: auto; page-break-after: auto; }
+    .cover { padding: 0; min-height: 296mm; background: var(--burgundy); }
+    .cover-top { padding: 13mm 16mm 5mm; }
+    .cover-main { padding: 12mm 16mm 0; }
+    .cover h1 { font-size: 50pt; }
+    .cover .cover-sub { font-size: 11.5pt; }
+    .cover-photo { flex: 1; min-height: 60mm; margin-top: 10mm; }
+    .cover-foot { padding: 4mm 16mm 5mm; }
+    .toolbar { display: none !important; }
+    a { color: inherit; }
+    table.prices, .service, .plan, .week, .card, .strategy-row, .principle, .gallery figure, .next { break-inside: avoid; }
+    .section-title { font-size: 25pt; }
+    .section-title.small { font-size: 20pt; }
+    .lead { font-size: 10.4pt; }
+    .service { padding: 11px 18px 12px; }
+    .service-head { padding-bottom: 6px; margin-bottom: 8px; }
+    .service ul { gap: 2px 18px; }
+    .service li { line-height: 1.5; }
+    .plans { gap: 12px; }
+    .plan { padding: 15px 18px 16px; }
+    .plan ul { margin-top: 8px; }
+    .plan li { padding: 2px 0 2px 14px; }
+    table.prices td { padding: 7px 0; }
+    .week { padding: 10px 0; }
+    .conditions { gap: 4px 24px; }
+    .next { padding: 15px 18px; }
+    .signature { margin-top: 18px; padding-top: 14px; }
+    .strategy-row { padding: 12px 0; }
+    .gallery img { height: 40mm; }
+  }
+</style>
+</head>
+<body>
+<div class="toolbar no-print">
+  <span class="hint">Pour WhatsApp : imprimez en PDF puis envoyez le fichier.</span>
+  <button type="button" onclick="window.print()">Télécharger en PDF</button>
+</div>
+
+<main class="doc">
+
+  <!-- ══════════════ 1. COUVERTURE ══════════════ -->
+  <section class="sheet cover">
+    <div class="cover-top">
+      <div class="logo">
+        <span class="lw">Aïna<span>.</span></span>
+        <span class="ls">Studio</span>
+      </div>
+      <div class="cover-meta">
+        Proposition commerciale<br />
+        Octobre 2026<br />
+        Valable 30 jours
+      </div>
+    </div>
+
+    <div class="cover-main">
+      <p class="cover-kicker">Présence digitale &amp; visibilité locale</p>
+      <h1>AMSP<br /><em>Aménagement</em></h1>
+      <p class="cover-sub">
+        Création d'une présence digitale professionnelle pour développer vos demandes de devis,
+        votre visibilité locale et votre image de marque.
+      </p>
+      <div class="cover-hair"></div>
+      <div class="cover-facts">
+        <div>Projet<b>Site vitrine</b></div>
+        <div>Zone<b>Loire · Ondaine</b></div>
+        <div>Préparé par<b>Aïna Studio</b></div>
+      </div>
+    </div>
+
+    <div class="cover-photo"></div>
+    <div class="cover-foot">
+      <span>Aïna Studio — création digitale</span>
+      <span>Dossier préparé pour AMSP Aménagement · Le Chambon-Feugerolles</span>
+    </div>
+  </section>
+
+  <!-- ══════════════ 2. LE PROJET ══════════════ -->
+  <section class="sheet" id="projet">
+    <p class="kicker">01 — Le projet</p>
+    <h2 class="section-title">Votre savoir-faire mérite d'être trouvé.</h2>
+    <p class="lead">
+      AMSP Aménagement conçoit, fabrique et pose des cuisines, dressings, placards et agencements intérieurs
+      sur mesure au Chambon-Feugerolles. Un travail d'artisan, une clientèle locale, et un enjeu simple :
+      être visible au moment précis où un habitant de l'Ondaine cherche un cuisiniste.
+    </p>
+
+    <div class="grid-2" style="margin-top: 26px;">
+      <div class="card">
+        <span class="no">LE CONSTAT</span>
+        <h3>Une entreprise reconnue… mais difficile à trouver en ligne</h3>
+        <p>
+          Le bouche-à-oreille fonctionne. Pourtant, une part croissante des demandes commence par une recherche
+          Google : « cuisine sur mesure Saint-Étienne », « dressing sur mesure Le Chambon-Feugerolles ».
+          Sans site ni fiche Google optimisée, ces demandes partent chez les concurrents.
+        </p>
+      </div>
+      <div class="card">
+        <span class="no">LA RÉPONSE</span>
+        <h3>Un site vitrine qui travaille pour vous, 7 jours sur 7</h3>
+        <p>
+          Un site clair, rapide et haut de gamme qui présente vos services, vos réalisations et votre méthode,
+          avec un chemin direct vers le devis. Le site est déjà conçu et développé : il reste à valider
+          les contenus et à le mettre en ligne.
+        </p>
+      </div>
+    </div>
+
+    <h3 style="font-size: 18px; margin: 26px 0 6px;">Les objectifs du projet</h3>
+    <div class="objectifs">
+      <div class="objectif">
+        <span class="oi">01</span>
+        <p><strong>Générer des demandes de devis qualifiées</strong> — chaque page mène à un formulaire simple, à un appel ou à WhatsApp.</p>
+      </div>
+      <div class="objectif">
+        <span class="oi">02</span>
+        <p><strong>Inspirer confiance en quelques secondes</strong> — réalisations, méthode en 5 étapes, avis clients et ancrage local.</p>
+      </div>
+      <div class="objectif">
+        <span class="oi">03</span>
+        <p><strong>Être visible localement sur Google</strong> — SEO local, fiche Google Business Profile et avis clients.</p>
+      </div>
+      <div class="objectif">
+        <span class="oi">04</span>
+        <p><strong>Préparer la suite</strong> — Instagram structuré et campagnes Google Ads prêtes à activer.</p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>7</b><span>pages de services</span></div>
+      <div class="stat"><b>3</b><span>canaux de contact</span></div>
+      <div class="stat"><b>48 h</b><span>délai de devis annoncé</span></div>
+      <div class="stat"><b>100 %</b><span>responsive</span></div>
+    </div>
+
+    <p class="note" style="margin-top: 14px;">
+      Zone couverte : Le Chambon-Feugerolles, Saint-Étienne, Firminy, La Ricamarie, Unieux, Fraisses,
+      Roche-la-Molière et alentours.
+    </p>
+  </section>
+
+  <!-- ══════════════ 3. LE SITE ══════════════ -->
+  <section class="sheet" id="site">
+    <p class="kicker">02 — Votre site vitrine</p>
+    <h2 class="section-title">Un site pensé pour convertir, pas seulement pour présenter.</h2>
+    <p class="lead" style="margin-bottom: 20px;">
+      Direction artistique sur mesure, photographie plein écran, animations discrètes et hiérarchie claire :
+      le site installe immédiatement un niveau de gamme, sans jamais sacrifier la lisibilité ni la vitesse.
+    </p>
+
+    <div class="browser">
+      <div class="browser-bar">
+        <i></i><i></i><i></i>
+        <span class="url">amsp-amenagement.fr</span>
+      </div>
+      <div class="mini-nav">
+        <b>AMSP.</b>
+        <span>Cuisines</span><span>Agencement</span><span>Réalisations</span><span>Méthode</span>
+        <span class="mini-cta">Devis gratuit</span>
+      </div>
+      <div class="mini-hero">
+        <div class="mini-hero-content">
+          <div class="mk">Artisan aménageur — Le Chambon-Feugerolles</div>
+          <div class="mt">Cuisines et aménagements <em>sur mesure</em></div>
+          <div class="mb"><span>Demander un devis gratuit</span><span>Découvrir nos réalisations</span></div>
+        </div>
+      </div>
+      <div class="mini-band">
+        <div>Devis gratuit sous 48 h</div>
+        <div>Fabrication sur mesure</div>
+        <div>Artisan local — Loire</div>
+      </div>
+    </div>
+    <p class="caption">Aperçu de la page d'accueil — maquette développée, personnalisable après validation.</p>
+
+    <div class="principles" style="margin-top: 24px;">
+      <div class="principle">
+        <h3>Clair en 5 secondes</h3>
+        <p>Qui vous êtes, ce que vous faites, où vous intervenez : tout est lisible dès le premier écran.</p>
+      </div>
+      <div class="principle">
+        <h3>La preuve par le chantier</h3>
+        <p>Réalisations filtrables, avant/après et méthode détaillée : le travail parle avant les promesses.</p>
+      </div>
+      <div class="principle">
+        <h3>Un chemin vers le devis</h3>
+        <p>Devis, appel et WhatsApp accessibles partout, y compris dans une barre fixe sur mobile.</p>
+      </div>
+    </div>
+
+    <hr class="rule" />
+
+    <h3 style="font-size: 18px; margin-bottom: 2px;">Les pages livrées</h3>
+    <ul class="pages-list">
+      <li>Accueil <span>en-tête animé, preuves, services, avis</span></li>
+      <li>Cuisines sur mesure <span>processus, réalisations, CTA</span></li>
+      <li>Agencement sur mesure <span>dressings, placards, meubles</span></li>
+      <li>Rénovation intérieure <span>travaux, finitions, méthode</span></li>
+      <li>Réalisations <span>galerie filtrable, avant/après</span></li>
+      <li>Notre méthode <span>5 étapes, engagements</span></li>
+      <li>Zones d'intervention <span>7 communes + alentours</span></li>
+      <li>Contact &amp; devis <span>formulaire, WhatsApp, carte</span></li>
+      <li>Conseils <span>blog SEO, 3 articles de lancement</span></li>
+      <li>Mentions &amp; confidentialité <span>conformité RGPD</span></li>
+    </ul>
+  </section>
+
+  <!-- ══════════════ 4. LE SITE — DÉTAILS ══════════════ -->
+  <section class="sheet" id="site-suite">
+    <p class="kicker">02 — Votre site vitrine (suite)</p>
+    <h2 class="section-title small">Tout ce qui est intégré, sans supplément.</h2>
+
+    <div class="features" style="margin-top: 18px;">
+      <div class="feature">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6d1f2c" stroke-width="2.2"><path d="m4 12 5 5L20 6"/></svg>
+        <span><strong style="color:#2b2320">100 % responsive</strong> — téléphone, tablette, ordinateur.</span>
+      </div>
+      <div class="feature">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6d1f2c" stroke-width="2.2"><path d="m4 12 5 5L20 6"/></svg>
+        <span><strong style="color:#2b2320">Formulaire de devis</strong> — validation et envoi par WhatsApp ou e-mail.</span>
+      </div>
+      <div class="feature">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6d1f2c" stroke-width="2.2"><path d="m4 12 5 5L20 6"/></svg>
+        <span><strong style="color:#2b2320">Appel &amp; WhatsApp</strong> — boutons fixes sur mobile.</span>
+      </div>
+      <div class="feature">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6d1f2c" stroke-width="2.2"><path d="m4 12 5 5L20 6"/></svg>
+        <span><strong style="color:#2b2320">Google Maps</strong> — itinéraire et adresse en un tap.</span>
+      </div>
+      <div class="feature">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6d1f2c" stroke-width="2.2"><path d="m4 12 5 5L20 6"/></svg>
+        <span><strong style="color:#2b2320">SEO local</strong> — balises, données structurées LocalBusiness, sitemap.</span>
+      </div>
+      <div class="feature">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6d1f2c" stroke-width="2.2"><path d="m4 12 5 5L20 6"/></svg>
+        <span><strong style="color:#2b2320">Avis clients</strong> — mise en avant des retours Google.</span>
+      </div>
+      <div class="feature">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6d1f2c" stroke-width="2.2"><path d="m4 12 5 5L20 6"/></svg>
+        <span><strong style="color:#2b2320">Animations &amp; 3D</strong> — héro, cartes et étapes animées avec sobriété.</span>
+      </div>
+      <div class="feature">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6d1f2c" stroke-width="2.2"><path d="m4 12 5 5L20 6"/></svg>
+        <span><strong style="color:#2b2320">Analytics &amp; Search Console</strong> — suivi des visites et des demandes.</span>
+      </div>
+      <div class="feature">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6d1f2c" stroke-width="2.2"><path d="m4 12 5 5L20 6"/></svg>
+        <span><strong style="color:#2b2320">Blog conseils</strong> — 3 articles de départ pour le référencement.</span>
+      </div>
+      <div class="feature">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6d1f2c" stroke-width="2.2"><path d="m4 12 5 5L20 6"/></svg>
+        <span><strong style="color:#2b2320">Formation</strong> — prise en main du site et des demandes reçues.</span>
+      </div>
+    </div>
+
+    <hr class="rule" />
+
+    <h3 style="font-size: 18px; margin-bottom: 2px;">La direction artistique</h3>
+    <p style="font-size: 13.2px; color: var(--muted); margin: 0;">
+      Ivoire, bleu profond, azur : une base lumineuse, des accents nets et de larges photos.
+    </p>
+
+    <div class="gallery">
+      <figure>
+        <img src="data:image/jpeg;base64,__CUISINE__" alt="Cuisine sur mesure en bois clair" />
+        <figcaption>Cuisines sur mesure</figcaption>
+      </figure>
+      <figure>
+        <img src="data:image/jpeg;base64,__AGENCEMENT__" alt="Agencement sur mesure, meuble TV et étagères" />
+        <figcaption>Agencements</figcaption>
+      </figure>
+      <figure>
+        <img src="data:image/jpeg;base64,__SDB__" alt="Salle d'eau rénovée" />
+        <figcaption>Rénovations</figcaption>
+      </figure>
+    </div>
+    <p class="note">
+      Les photographies de cette maquette sont des visuels d'illustration. Elles seront remplacées par vos
+      photos de chantiers — c'est le principal levier de crédibilité du site.
+    </p>
+
+    <hr class="rule" />
+
+    <h3 style="font-size: 18px; margin-bottom: 2px;">La palette et les caractères</h3>
+    <p style="font-size: 13.2px; color: var(--muted); margin: 0;">
+      Quatre teintes et deux familles de caractères : de quoi rester cohérent sur le site, sur Google et sur Instagram.
+    </p>
+
+    <div class="palette">
+      <div class="swatch"><span style="background:#fbfaf6; border-bottom:1px solid rgba(43,35,32,.1)"></span><b>Ivoire</b><i>#FBFAF6</i></div>
+      <div class="swatch"><span style="background:#0e1622"></span><b>Encre</b><i>#0E1622</i></div>
+      <div class="swatch"><span style="background:#1b4fd8"></span><b>Bleu atelier</b><i>#1B4FD8</i></div>
+      <div class="swatch"><span style="background:#45c4f5"></span><b>Azur</b><i>#45C4F5</i></div>
+    </div>
+
+    <div class="typo">
+      <div>
+        <span class="t1">Fraunces</span>
+        <p>Titres, accroches et citations — une serif chaleureuse, un peu artisanale.</p>
+      </div>
+      <div>
+        <span class="t2">Manrope — lisibilité et neutralité</span>
+        <p>Textes courants, formulaires et micro-titres, jusque sur mobile.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 5. STRATÉGIE ══════════════ -->
+  <section class="sheet" id="strategie">
+    <p class="kicker">03 — La stratégie</p>
+    <h2 class="section-title">Six étapes pour être trouvé, compris, contacté.</h2>
+    <p class="lead">
+      Un site seul ne suffit pas : il doit s'appuyer sur un positionnement clair et une présence locale cohérente.
+      Voici la démarche proposée, dans l'ordre.
+    </p>
+
+    <div class="strategy">
+      <div class="strategy-row">
+        <span class="sn">01</span>
+        <div>
+          <h3>Audit de l'existant</h3>
+          <p>Site, fiche Google, compte Instagram, présence sur les annuaires : ce qui fonctionne, ce qui manque, ce qu'il faut corriger.</p>
+        </div>
+      </div>
+      <div class="strategy-row">
+        <span class="sn">02</span>
+        <div>
+          <h3>Positionnement</h3>
+          <p>Un artisan local, haut de gamme mais accessible, qui conçoit, fabrique et pose lui-même. Cette promesse guide les textes et les visuels.</p>
+        </div>
+      </div>
+      <div class="strategy-row">
+        <span class="sn">03</span>
+        <div>
+          <h3>Analyse des concurrents locaux</h3>
+          <p>Cuisinistes et agenceurs de Saint-Étienne, Firminy et alentours : leurs arguments, leurs prix affichés, leurs angles morts.</p>
+        </div>
+      </div>
+      <div class="strategy-row">
+        <span class="sn">04</span>
+        <div>
+          <h3>Services à mettre en avant</h3>
+          <p>Priorité aux prestations les plus rentables et les plus recherchées : cuisine sur mesure, dressing, placards et rangements.</p>
+        </div>
+      </div>
+      <div class="strategy-row">
+        <span class="sn">05</span>
+        <div>
+          <h3>SEO local</h3>
+          <p>Une page par service, des pages zones d'intervention, des mots-clés à intention locale et une fiche Google complète avec avis.</p>
+        </div>
+      </div>
+      <div class="strategy-row">
+        <span class="sn">06</span>
+        <div>
+          <h3>Instagram &amp; Google Ads</h3>
+          <p>Une ligne éditoriale et des visuels de lancement, puis des campagnes de recherche locales prêtes à activer sur les mots-clés à forte intention.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="next" style="margin-top: 24px;">
+      <h3 style="font-size: 17px; margin-bottom: 4px;">Le fil rouge</h3>
+      <p style="margin: 0; font-size: 13px; color: var(--muted);">
+        Chaque décision — une photo, un titre, un bouton — répond à une seule question :
+        est-ce que cela rapproche un habitant du secteur d'une demande de devis ?
+      </p>
+    </div>
+
+    <h3 style="font-size: 16px; margin: 22px 0 0;">Ce que l'on mesure</h3>
+    <div class="kpis">
+      <div class="kpi"><b>Demandes de devis</b><span>formulaire et WhatsApp</span></div>
+      <div class="kpi"><b>Appels</b><span>boutons d'appel suivis</span></div>
+      <div class="kpi"><b>Itinéraires</b><span>clics depuis Google Maps</span></div>
+    </div>
+    <p class="note">Des objectifs concrets, suivis chaque mois — pas des impressions.</p>
+  </section>
+
+  <!-- ══════════════ 6. PRESTATIONS ══════════════ -->
+  <section class="sheet" id="prestations">
+    <p class="kicker">04 — Les prestations</p>
+    <h2 class="section-title">Ce que je vous propose, à la carte.</h2>
+    <p class="lead" style="margin-bottom: 14px;">
+      Tarifs HT des prestations prises séparément, cumulables en formules (page suivante).
+      Le budget publicitaire Google Ads, versé à Google, est distinct.
+    </p>
+
+    <div style="display: grid; gap: 14px;">
+      <div class="service">
+        <div class="service-head">
+          <h3>Identité visuelle</h3>
+          <div class="service-price">60 €<small>forfait</small></div>
+        </div>
+        <ul>
+          <li>Logo ou harmonisation de l'existant</li>
+          <li>Déclinaisons (fond clair / fond sombre)</li>
+          <li>Palette de couleurs</li>
+          <li>Typographies</li>
+          <li>Mini-charte graphique</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <div class="service-head">
+          <h3>Site vitrine</h3>
+          <div class="service-price">650 €<small>au forfait</small></div>
+        </div>
+        <ul>
+          <li>Site responsive, 5 à 7 pages</li>
+          <li>Formulaire de demande de devis</li>
+          <li>Boutons appel et WhatsApp</li>
+          <li>Intégration Google Maps</li>
+          <li>SEO local de base</li>
+          <li>Analytics &amp; Search Console</li>
+          <li>Formation à la prise en main</li>
+          <li>Mise en ligne incluse</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <div class="service-head">
+          <h3>Google Business Profile</h3>
+          <div class="service-price">80 €<small>forfait</small></div>
+        </div>
+        <ul>
+          <li>Création ou optimisation de la fiche</li>
+          <li>Catégories, description, services</li>
+          <li>Horaires et zone d'intervention</li>
+          <li>Photos et stratégie d'avis clients</li>
+          <li>Premières publications Google</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <div class="service-head">
+          <h3>Pack Instagram</h3>
+          <div class="service-price">60 €<small>forfait</small></div>
+        </div>
+        <ul>
+          <li>Audit du compte existant</li>
+          <li>Optimisation de la bio</li>
+          <li>Direction artistique</li>
+          <li>Templates de publications</li>
+          <li>6 posts de lancement</li>
+          <li>Ligne éditoriale</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <div class="service-head">
+          <h3>Google Ads</h3>
+          <div class="service-price">120 €<small>mise en place</small></div>
+        </div>
+        <ul>
+          <li>Structure de compte et campagnes locales</li>
+          <li>Mots-clés à forte intention</li>
+          <li>Rédaction des annonces</li>
+          <li>Suivi des conversions</li>
+          <li>Recommandations de budget</li>
+          <li>Gestion : 75 € / mois</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="note" style="margin-top: 12px;">
+      Domaine, hébergement et visuels éventuels facturés au réel.
+    </p>
+  </section>
+
+  <!-- ══════════════ 7. FORMULES ══════════════ -->
+  <section class="sheet" id="formules">
+    <p class="kicker">05 — Les formules</p>
+    <h2 class="section-title">Quatre façons de démarrer.</h2>
+    <p class="lead">
+      Les formules regroupent les prestations à la carte, sans supplément ni frais cachés — tarifs HT, hors budget publicitaire.
+      La formule <strong style="color: var(--burgundy);">Lancement complet</strong> est celle que je recommande
+      pour AMSP : elle couvre tout ce qui fait la différence entre un site qui existe et un site qui génère des demandes.
+    </p>
+
+    <div class="plans">
+      <div class="plan">
+        <h3>Essentiel</h3>
+        <p class="tagline">Le point de départ</p>
+        <div class="plan-price">650 €<small>HT</small></div>
+        <ul>
+          <li>Site vitrine 5 à 7 pages</li>
+          <li>Formulaire de devis</li>
+          <li>SEO local de base</li>
+          <li>Mise en ligne incluse</li>
+        </ul>
+      </div>
+
+      <div class="plan">
+        <h3>Visibilité locale</h3>
+        <p class="tagline">Site + fiche Google</p>
+        <div class="plan-price">730 €<small>HT</small></div>
+        <ul>
+          <li>Site vitrine complet</li>
+          <li>Google Business Profile optimisé</li>
+          <li>Jeu de photos et stratégie d'avis</li>
+          <li>Formulaire, appel et WhatsApp</li>
+        </ul>
+      </div>
+
+      <div class="plan recommended">
+        <span class="badge">Recommandée</span>
+        <h3>Lancement complet</h3>
+        <p class="tagline">L'image et la visibilité</p>
+        <div class="plan-price">850 €<small>HT</small></div>
+        <ul>
+          <li>Identité visuelle &amp; mini-charte</li>
+          <li>Site vitrine complet</li>
+          <li>Google Business Profile</li>
+          <li>Pack Instagram de lancement</li>
+        </ul>
+      </div>
+
+      <div class="plan">
+        <h3>Croissance</h3>
+        <p class="tagline">Lancement + Google Ads</p>
+        <div class="plan-price">970 €<small>HT</small></div>
+        <ul>
+          <li>Tout le lancement complet</li>
+          <li>Mise en place Google Ads</li>
+          <li>Campagnes locales &amp; conversions</li>
+          <li>Gestion mensuelle : 75 € / mois</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="font-size: 17px; margin: 26px 0 0;">Détail à la carte</h3>
+    <table class="prices">
+      <thead>
+        <tr><th>Prestation</th><th>Contenu</th><th>Tarif</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Identité visuelle</td><td>Logo, déclinaisons, mini-charte graphique</td><td>60 €</td></tr>
+        <tr><td>Site vitrine</td><td>5 à 7 pages, formulaire, SEO local, mise en ligne</td><td>650 €</td></tr>
+        <tr><td>Google Business Profile</td><td>Création / optimisation, photos, avis, posts</td><td>80 €</td></tr>
+        <tr><td>Pack Instagram</td><td>Audit, templates, 6 posts, ligne éditoriale</td><td>60 €</td></tr>
+        <tr><td>Google Ads — mise en place</td><td>Structure, mots-clés, annonces, suivi</td><td>120 €</td></tr>
+        <tr><td>Google Ads — gestion</td><td>Optimisation, reporting, ajustements</td><td>75 € / mois</td></tr>
+      </tbody>
+    </table>
+
+  </section>
+
+  <!-- ══════════════ 8. PLANNING & CONDITIONS ══════════════ -->
+  <section class="sheet" id="planning">
+    <p class="kicker">06 — Le planning</p>
+    <h2 class="section-title">Cinq semaines, du brief à la mise en ligne.</h2>
+    <p class="lead" style="margin-bottom: 4px;">
+      Calendrier indicatif, à compter de la réception des contenus (photos, textes, accès).
+    </p>
+
+    <div class="timeline">
+      <div class="week">
+        <div class="wk">Semaine 1<span>Cadrage</span></div>
+        <div>
+          <h4>Audit &amp; collecte</h4>
+          <p>Analyse de l'existant, arborescence validée, liste des contenus et des photos à fournir, accès aux comptes.</p>
+        </div>
+      </div>
+      <div class="week">
+        <div class="wk">Semaine 2<span>Identité</span></div>
+        <div>
+          <h4>Direction visuelle</h4>
+          <p>Logo ou harmonisation, palette, typographies, mini-charte. Validation avant production.</p>
+        </div>
+      </div>
+      <div class="week">
+        <div class="wk">Semaine 3<span>Production</span></div>
+        <div>
+          <h4>Développement du site</h4>
+          <p>Intégration des 7 pages, formulaire, boutons de contact, SEO local, carte et données structurées.</p>
+        </div>
+      </div>
+      <div class="week">
+        <div class="wk">Semaine 4<span>Visibilité</span></div>
+        <div>
+          <h4>Google &amp; Instagram</h4>
+          <p>Fiche Google Business Profile, photos, stratégie d'avis, visuels et ligne éditoriale Instagram.</p>
+        </div>
+      </div>
+      <div class="week">
+        <div class="wk">Semaine 5<span>Lancement</span></div>
+        <div>
+          <h4>Mise en ligne &amp; formation</h4>
+          <p>Tests mobile et ordinateur, Analytics et Search Console, formation à la prise en main, puis lancement Google Ads si la formule Croissance est retenue.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size: 17px; margin: 24px 0 4px;">Conditions</h3>
+    <div class="conditions">
+      <div class="condition"><strong>40 %</strong> à la commande, solde à la mise en ligne.</div>
+      <div class="condition"><strong>2 séries de retours</strong> incluses à chaque étape clé.</div>
+      <div class="condition"><strong>Contenus fournis</strong> par vos soins (photos, informations).</div>
+      <div class="condition"><strong>Aide à la rédaction</strong> possible, incluse dans le site.</div>
+      <div class="condition"><strong>Domaine &amp; hébergement</strong> facturés au réel si nécessaire.</div>
+      <div class="condition"><strong>Validité</strong> de la proposition : 30 jours.</div>
+    </div>
+
+    <div class="next" style="margin-top: 24px;">
+      <h3 style="font-size: 17px; margin-bottom: 4px;">Les prochaines étapes</h3>
+      <ol>
+        <li><strong>Vous validez</strong> la formule et les tarifs de cette proposition.</li>
+        <li><strong>Nous fixons</strong> un rendez-vous de cadrage (30 min) et recevons l'acompte.</li>
+        <li><strong>Vous transmettez</strong> photos de chantiers, coordonnées définitives et accès.</li>
+        <li><strong>Je lance</strong> la production — vous suivez l'avancement à chaque livrable.</li>
+      </ol>
+    </div>
+
+    <div class="signature">
+      <div>
+        <div class="who">Aïna Studio</div>
+        <small>Création digitale · site vitrine · visibilité locale</small>
+      </div>
+      <div class="stamp">
+        Proposition réalisée par Aïna Studio<br />
+        Octobre 2026<br />
+        Document non contractuel avant signature
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.env*
+!.env.example
+.DS_Store
+next-env.d.ts
+tsconfig.tsbuildinfo
+.tmp
+.tmp-sheet.jpg
+
+# Captures et fichiers de travail
+artifacts/
+proposition/.pylibs
