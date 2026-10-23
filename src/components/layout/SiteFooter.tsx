@@ -8,11 +8,11 @@ import { site, whatsappLink } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="relative overflow-x-clip bg-azur-dark text-paper">
-      <FooterWordmark />
+    <footer className="relative overflow-hidden bg-azur-dark text-paper">
       <div className="grain absolute inset-0" aria-hidden="true" />
       <div className="container-x relative z-10 pt-16 pb-24 md:pt-20 lg:pb-10">
-        <div className="grid gap-12 pb-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
+        <div className="relative isolate grid gap-12 pb-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
+          <FooterWordmark />
           <div>
             <Logo tone="paper" />
             <p className="mt-6 max-w-xs text-[0.95rem] leading-relaxed text-paper/85">
